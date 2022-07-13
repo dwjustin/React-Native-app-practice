@@ -24,7 +24,7 @@ export default function App() {
   return (
     <ScrollView>
       <View style={styles.container}>
-      <Image style={styles.image} source={require('./image/frog.png')}/>
+        <Image style={styles.image} source={require('./image/frog.png')}/>
         <Text>Hello I am a Frog!</Text>
         <StatusBar style="auto" />
         
