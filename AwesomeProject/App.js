@@ -5,21 +5,6 @@ import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import { ScrollView, Tab } from 'react-native-web';
 import React from 'react';
 
-
-const Stack=createNativeStackNavigator();
-
-const HomeScreen = ({ navigation }) => {
-  return (
-    <Button
-      title="Go to Frog's profile"
-      onPress={() =>
-        navigation.navigate('Profile', { name: 'Frog' })
-      }
-    />
-  );
-};
-
-
 export default function App() {
   return (
 
