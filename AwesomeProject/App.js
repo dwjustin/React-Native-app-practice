@@ -2,7 +2,7 @@ import { NavigationContainer, TabActions } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
-import { ScrollView, Tab } from 'react-native-web';
+import { ScrollView, Tab, TouchableOpacity } from 'react-native-web';
 import React from 'react';
 
 export default function App() {
@@ -13,6 +13,9 @@ export default function App() {
         <Text style={styles.title}>Hello I am a Frog!</Text>
         <Text style={styles.desc1}>Play with me!</Text>
         <Image style={styles.image} source={require('./image/frog.png')}/>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>우하하하</Text>
+        </TouchableOpacity>
       </View>
     </View>
 
@@ -32,13 +35,21 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginBottom: 30,
     width:300,
     height:200,
   },
   button:{
-    padding: 10,
-    height: 400,
-    width: 200
+    backgroundColor:"orange",
+    padding:20,
+    width: 200,
+    borderRadius:15,
+    marginBottom: 30
+    
+
+  },
+  buttonText:{
+    textAlign: 'center',
 
   },
 
