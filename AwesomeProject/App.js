@@ -18,41 +18,19 @@ const HomeScreen = ({ navigation }) => {
     />
   );
 };
-const ProfileScreen = ({ navigation, route }) => {
-  return <Text>This is {route.params.name}'s profile</Text>;
-};
 
-function Home(){
-  return(
-    <Tab.Navigator>
-      <Tab.Screen name='Feed' component={Feed}/>
-      <Tab.Screen name='Messages' component={Messages}/>
-    </Tab.Navigator>
-  );
-}
 
 export default function App() {
   return (
-    <ScrollView>
-      <View style={styles.container}>
+
+    <View style={styles.container}>
+      <View style={styles.textContainer}>
+        <Text style={styles.title}>Hello I am a Frog!</Text>
+        <Text style={styles.desc1}>Play with me!</Text>
         <Image style={styles.image} source={require('./image/frog.png')}/>
-        <Text>Hello I am a Frog!</Text>
-      
-        
       </View>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-           name="Home"
-           component={Home}
-           options={{headerShown: false}}/>
-          {/* <Stack.Screen name='Profile' component={Profile}/>
-          <Stack.Screen name='Settings' component={Settings}/>  */}
-        </Stack.Navigator>
-      </NavigationContainer>
-      
-      
-    </ScrollView>
+    </View>
+
     
   );
 }
@@ -60,7 +38,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#1F266A',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -69,13 +47,42 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    width:200,
+    width:300,
     height:200,
   },
   button:{
     padding: 10,
     height: 400,
     width: 200
+
+  },
+
+  title:{
+    fontSize:30,
+    fontWeight:"700",
+    color:"black",
+    paddingLeft:30,
+    paddingTop:100,
+    paddingRight:30
+  
+  },
+
+  desc1:{
+    textAlign:"center",
+    color: "#black",
+    fontSize:20,
+    fontWeight:"700",
+    paddingLeft:22,
+    paddingRight:22
+  },
+  textContainer:{
+    width:300,
+    height:500,
+    backgroundColor:"#fff",
+    marginTop:50,
+    borderRadius:30,
+    justifyContent:"center",
+    alignItems:"center"
 
   }
 
