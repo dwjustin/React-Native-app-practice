@@ -1,8 +1,5 @@
-import { NavigationContainer, TabActions } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
-import { ScrollView, Tab, TouchableOpacity } from 'react-native-web';
+
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 
 export default function App() {
@@ -14,13 +11,13 @@ export default function App() {
         <Text style={styles.desc1}>Play with me!</Text>
         <Image style={styles.image} source={require('./image/frog.png')}/>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>우하하하</Text>
+          <Text style={styles.buttonText}>Let's Go!</Text>
         </TouchableOpacity>
-        <Text style={styles.desc1}>Hello?</Text>
+       
       </View>
     </View>
 
-  );
+  )
 }
 
 const styles = StyleSheet.create({
