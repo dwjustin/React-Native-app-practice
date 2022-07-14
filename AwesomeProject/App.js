@@ -1,6 +1,22 @@
 
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Alert } from 'react-native';
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack= createStackNavigator();
+
+function MyStack(){
+  return (
+   
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home}/>
+      <Stack.Screen name="Profile" component={Profile}/>
+      <Stack.Screen name="Settings" component={Settings}/>
+    </Stack.Navigator>
+  );
+}
+
 
 export default function App() {
   return (
@@ -10,7 +26,7 @@ export default function App() {
         <Text style={styles.title}>Hello I am a Frog!</Text>
         <Text style={styles.desc1}>Play with me!</Text>
         <Image style={styles.image} source={require('./image/frog.png')}/>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={MyStack} activeOpacity={0.8} style={styles.button}>
           <Text style={styles.buttonText}>Let's Go!</Text>
         </TouchableOpacity>
        
