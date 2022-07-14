@@ -19,7 +19,6 @@ export default function App() {
       </View>
     </View>
 
-    
   );
 }
 
@@ -50,7 +49,7 @@ const styles = StyleSheet.create({
   },
   buttonText:{
     textAlign: 'center',
-
+    
   },
 
   title:{
