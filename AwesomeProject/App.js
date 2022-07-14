@@ -16,6 +16,7 @@ export default function App() {
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>우하하하</Text>
         </TouchableOpacity>
+        <Text style={styles.desc1}>Hello?</Text>
       </View>
     </View>
 
